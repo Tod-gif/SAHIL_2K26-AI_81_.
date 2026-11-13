@@ -1,0 +1,30 @@
+QUESTION NO: 04
+
+class BankAccount:
+    def __init__(self, account_holder, balance):
+        self.account_holder = account_holder
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance = self.balance + amount
+        print("Money Deposited:", amount)
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+            print("Insufficient balance")
+        else:
+            self.balance = self.balance - amount
+            print("Withdraw:", amount)
+
+    def display_balance(self):
+        print("Account Holder:", self.account_holder)
+        print("Current Balance:", self.balance)
+
+acc = BankAccount("Sahil", 1000)
+acc.display_balance()
+
+acc.deposit(500)
+acc.display_balance()
+
+acc.withdraw(300)
+acc.display_balance()
