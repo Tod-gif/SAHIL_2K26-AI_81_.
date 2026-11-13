@@ -1,0 +1,15 @@
+QUESTION NO: 01
+
+
+class Car:
+    def __init__(self, brand, color):
+        self.brand = brand
+        self.color = color
+
+    def start(self):
+        print("The car is starting.")
+
+
+car1 = Car("Toyota", "Red")
+print(car1.brand, car1.color)
+car1.start()
